@@ -9,27 +9,37 @@ import DocsContent from './docs-content'
 const shortcodes = { Link }
 
 export default function DocsLayout({ data: { mdx } }) {
+  console.log(mdx)
   return (
     <>
+      <aside>
+        <Link activeStyle={{ color: 'red' }} to="/blog/blog-1" partiallyActive>
+          /blog/blog-1
+        </Link>
+        <Link activeStyle={{ color: 'red' }} to="/blog/blog-2" partiallyActive>
+          /blog/blog-2
+        </Link>
+      </aside>
+      <header>header</header>
       <main>
-        <MDXProvider components={shortcodes}>
-          <MDXRenderer>
-            <DocsContent>{mdx.body}</DocsContent>
-          </MDXRenderer>
-        </MDXProvider>
+        <DocsContent>
+          <MDXProvider components={shortcodes}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+        </DocsContent>
       </main>
     </>
   )
 }
 
-// export const pageQuery = graphql`
-//   query BlogPostQuery($id: String) {
-//     mdx(id: { eq: $id }) {
-//       id
-//       body
-//       frontmatter {
-//         title
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query DocsQuery($id: String) {
+    mdx(id: { eq: $id }) {
+      id
+      body
+      frontmatter {
+        title
+      }
+    }
+  }
+`
