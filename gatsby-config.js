@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'gatsby-site',
+    description: 'go go go',
+    author: `@LeoKu`,
   },
   plugins: [
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -10,7 +13,26 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    `gatsby-plugin-mdx`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'docs',
+        path: `${__dirname}/content/docs/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/content/posts/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
+      },
+    },
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
