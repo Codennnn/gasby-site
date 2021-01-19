@@ -1,0 +1,129 @@
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+code[class*='language-'],
+pre[class*='language-'] {
+  color: #9dadff;
+  font-size: 1em;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  line-height: 1.5;
+  white-space: pre;
+  text-align: left;
+  word-wrap: normal;
+  word-break: normal;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  background: #25293e;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+:not(pre) > code[class*='language-'],
+ pre[class*='language-']
+   // background #2d2d2d
+ 
+ /* Inline code */
+ :not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  white-space: normal;
+  border-radius: 0.3em;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  // color #737796
+  color: #aaa;
+}
+
+.token.punctuation {
+  // color #737796
+  color: #aaa;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.tag,
+.token.operator,
+.token.number {
+  color: #e09142;
+}
+
+.token.deleted {
+  text-decoration: line-through;
+}
+
+.token.attr-name,
+.token.important {
+  color: #c4b9fe;
+}
+
+.token.function-name {
+  color: #6196cc;
+}
+
+.token.class-name,
+.token.constant,
+.token.symbol {
+  color: #b7a9f9;
+}
+
+.token.tag-id,
+.token.atrule-id,
+.token.selector,
+.token.atrule,
+.token.builtin {
+  color: #eeebff;
+}
+
+.token.boolean,
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable,
+.token.entity,
+.token.url,
+.token.keyword {
+  color: #fc9;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.inserted {
+  color: green;
+}
+
+/* new */
+.token.property,
+.token.function {
+  color: #b7a9f9;
+}

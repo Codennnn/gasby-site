@@ -16,13 +16,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'docs',
-        path: `${__dirname}/content/docs/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'posts',
         path: `${__dirname}/content/posts/`,
       },
@@ -31,6 +24,28 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            },
+          },
+        //   {
+        //     resolve: `gatsby-remark-images`,
+        //     options: {
+        //       maxWidth: 590,
+        //       linkImagesToOriginal: false,
+        //     },
+        //   },
+        //   {
+        //     resolve: 'gatsby-remark-images-medium-zoom',
+        //   },
+        // ],
       },
     },
     {
