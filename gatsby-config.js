@@ -35,17 +35,17 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-        //   {
-        //     resolve: `gatsby-remark-images`,
-        //     options: {
-        //       maxWidth: 590,
-        //       linkImagesToOriginal: false,
-        //     },
-        //   },
-        //   {
-        //     resolve: 'gatsby-remark-images-medium-zoom',
-        //   },
-        // ],
+          //   {
+          //     resolve: `gatsby-remark-images`,
+          //     options: {
+          //       maxWidth: 590,
+          //       linkImagesToOriginal: false,
+          //     },
+          //   },
+          //   {
+          //     resolve: 'gatsby-remark-images-medium-zoom',
+          //   },
+        ],
       },
     },
     {
