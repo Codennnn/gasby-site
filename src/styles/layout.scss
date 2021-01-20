@@ -1,0 +1,15 @@
+@use "./variables" as var;
+
+.app-header {
+  display: flex;
+  align-items: center;
+  height: var.$header-height;
+
+  &::before {
+    backdrop-filter: blur(4px) saturate(200%);
+  }
+
+  &::after {
+    background: hsla(0, 0%, 100%, 0.66667);
+  }
+}

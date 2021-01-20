@@ -17,6 +17,7 @@ module.exports = {
           'each',
           'function',
           'return',
+          'use',
         ],
       },
     ],

@@ -6,8 +6,8 @@ export default function BlogPage({ data }) {
 
   return (
     <div>
-      <h1>Hi people</h1>
-      <aside>
+      <h1>Blog</h1>
+      <div>
         {posts
           .filter(post => post.node.frontmatter.title.length > 0)
           .map(({ node: post }) => {
@@ -21,7 +21,7 @@ export default function BlogPage({ data }) {
               </div>
             )
           })}
-      </aside>
+      </div>
     </div>
   )
 }

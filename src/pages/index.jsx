@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import '../styles/reset.css'
-import '../styles/app.scss'
+import AppHeader from '../components/layout/AppHeader'
+
 import '../styles/home.scss'
-import '../styles/code.scss'
-import '../styles/code-theme.scss'
 
 export default function HomePage() {
   return (
     <div className="home">
+      <AppHeader />
+
       <h1>Hi, I'm LeoKu 🖖</h1>
 
       <p className="text text-2">

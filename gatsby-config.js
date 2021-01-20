@@ -5,7 +5,9 @@ module.exports = {
     author: `@LeoKu`,
   },
   plugins: [
-    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-sass',
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
