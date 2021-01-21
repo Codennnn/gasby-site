@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import DarkToggle from '../DarkToggle'
+
 export default function AppHeader() {
   return (
     <div className="app-header">
@@ -9,6 +11,8 @@ export default function AppHeader() {
       <Link to="/blog" className="">
         Blog
       </Link>
+
+      <DarkToggle />
     </div>
   )
 }

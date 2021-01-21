@@ -1,6 +1,7 @@
 .home {
   min-width: 1100px;
   margin: 0 auto;
+  color: var(--color-text);
 
   .avatar-wrapper {
     display: flex;
@@ -39,10 +40,10 @@
     height: 3rem;
     margin: 0 auto;
     margin-bottom: 2rem;
-    color: #fff;
+    color: var(--color-background);
     line-height: 3rem;
     text-align: center;
-    background-color: #eee;
+    background-color: var(--color-text);
     border-radius: 1.5rem;
   }
 }
