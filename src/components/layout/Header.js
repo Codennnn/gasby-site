@@ -3,9 +3,9 @@ import { Link } from 'gatsby'
 
 import DarkToggle from '../DarkToggle'
 
-export default function AppHeader() {
+export default function Header() {
   return (
-    <div className="app-header">
+    <header className="header">
       <div>LeoKu</div>
 
       <Link to="/blog" className="">
@@ -13,6 +13,6 @@ export default function AppHeader() {
       </Link>
 
       <DarkToggle />
-    </div>
+    </header>
   )
 }

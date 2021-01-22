@@ -1,6 +1,6 @@
 @use "./variables" as var;
 
-.app-header {
+.header {
   display: flex;
   align-items: center;
   height: var.$header-height;
@@ -12,4 +12,8 @@
   &::after {
     background: hsla(0, 0%, 100%, 0.66667);
   }
+}
+
+.footer {
+  //
 }
