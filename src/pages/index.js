@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '@/components/layout'
-import TextLine from '../components/TextLine'
+import TextLine from '@/components/TextLine'
 
-import '../styles/home.scss'
+import '@/styles/home.scss'
 
 export default function HomePage() {
   return (
@@ -15,6 +15,7 @@ export default function HomePage() {
             alt="Avatar"
             className="avatar"
             src="https://gitee.com/chinesee/images/raw/master/img/img_043.png"
+            draggable="false"
           />
         </div>
 

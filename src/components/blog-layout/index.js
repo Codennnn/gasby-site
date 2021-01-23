@@ -4,19 +4,21 @@ import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
 
+import Layout from '@/components/layout'
+
+import '@/styles/article.scss'
+
 const shortcodes = { Link }
 
 export default function BlogLayout({ data: { mdx } }) {
   return (
-    <>
-      <main>
-        <h1>{mdx.frontmatter.title}</h1>
-
+    <Layout>
+      <article className="blog-article">
         <MDXProvider components={shortcodes}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
-      </main>
-    </>
+      </article>
+    </Layout>
   )
 }
 

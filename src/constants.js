@@ -1,7 +1,11 @@
 export const COLORS = {
   text: {
-    light: '#4a5568', // white
-    dark: 'hsl(0deg, 0%, 100%)', // near-black
+    light: '#4a5568',
+    dark: '#999',
+  },
+  'text-rgb': {
+    light: '74, 85, 104',
+    dark: 'hsl(0deg, 0%, 100%)',
   },
   background: {
     light: 'hsl(0deg, 0%, 100%)', // white
@@ -21,7 +25,7 @@ export const COLORS = {
   },
   // Grays, scaling from least-noticeable to most-noticeable
   gray300: {
-    light: 'hsl(0deg, 0%, 70%)',
+    light: '#8b97ac',
     dark: 'hsl(0deg, 0%, 30%)',
   },
   gray500: {

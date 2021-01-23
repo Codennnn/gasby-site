@@ -3,26 +3,33 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '@/components/layout'
 
+import '@/styles/blog.scss'
+
 export default function BlogPage({ data }) {
   const { edges: posts } = data.allMdx
 
   return (
     <Layout>
-      <h1>Blog</h1>
-      <div>
-        {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
-              <div className="blog-post-preview" key={post.id}>
-                <h2>
-                  <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-                </h2>
-                <h2>{post.frontmatter.date}</h2>
-                <p>{post.excerpt}</p>
-              </div>
-            )
-          })}
+      <div className="blog">
+        <div>
+          {posts
+            .filter(post => post.node.frontmatter.title.length > 0)
+            .map(({ node: post }) => {
+              return (
+                <Link
+                  to={post.fields.slug}
+                  className="blog-post-article"
+                  key={post.id}
+                >
+                  <h3 className="article-title">{post.frontmatter.title}</h3>
+
+                  <p className="article-excerpt">{post.excerpt}</p>
+
+                  <p className="read-more">查看全文</p>
+                </Link>
+              )
+            })}
+        </div>
       </div>
     </Layout>
   )
@@ -33,7 +40,7 @@ export const pageQuery = graphql`
     allMdx {
       edges {
         node {
-          excerpt(pruneLength: 200)
+          excerpt(pruneLength: 100)
           id
           frontmatter {
             title

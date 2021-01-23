@@ -18,7 +18,9 @@ export default function Header() {
 
   return (
     <header className="header">
-      <div className="site-name">LeoKu</div>
+      <Link className="site-name" to="/">
+        LeoKu
+      </Link>
 
       <nav className="nav-links">
         {navItems.map(({ url, name }) => (
@@ -34,7 +36,9 @@ export default function Header() {
         ))}
       </nav>
 
-      <DarkToggle />
+      <div className="actions">
+        <DarkToggle />
+      </div>
     </header>
   )
 }

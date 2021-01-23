@@ -1,0 +1,37 @@
+@use "./variables" as var;
+
+.blog-article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  h1 {
+    margin-bottom: 3rem;
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 1.5;
+  }
+
+  h2 {
+    margin-top: -3.1rem;
+    padding-top: 4.6rem;
+    font-weight: bold;
+    font-size: 1.65rem;
+  }
+
+  p {
+    margin: 1.5rem 0;
+    line-height: 1.8;
+  }
+
+  img {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1.5rem rgba(var(--color-text-rgb), 0.1);
+  }
+}
+
+@media (max-width: var.$mobile) {
+  .blog-article {
+    max-width: none;
+  }
+}
