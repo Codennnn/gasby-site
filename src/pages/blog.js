@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
+import Layout from '@/components/layout'
+
 export default function BlogPage({ data }) {
   const { edges: posts } = data.allMdx
 
   return (
-    <div>
+    <Layout>
       <h1>Blog</h1>
       <div>
         {posts
@@ -22,7 +24,7 @@ export default function BlogPage({ data }) {
             )
           })}
       </div>
-    </div>
+    </Layout>
   )
 }
 
@@ -31,7 +33,7 @@ export const pageQuery = graphql`
     allMdx {
       edges {
         node {
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 200)
           id
           frontmatter {
             title

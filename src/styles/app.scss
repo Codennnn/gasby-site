@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 html,
 body {
   font-size: 16px;
@@ -5,7 +7,14 @@ body {
 
 body {
   color: var(--color-text);
+  font-family: -apple-system, Rubik, Segoe UI, Roboto, Helvetica Neue,
+    PingFang SC, Noto Sans, Noto Sans CJK SC, Microsoft YaHei, 微软雅黑,
+    sans-serif;
   background: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(var(--color-primary-rgb), 0.15);
 }

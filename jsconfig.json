@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "jsx": "react",
+    "removeComments": true,
+    "baseUrl": ".",
+    "paths": {
+      "~components": ["src/components"],
+      "@/*": ["./src/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+  ]
+}

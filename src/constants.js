@@ -1,6 +1,6 @@
 export const COLORS = {
   text: {
-    light: 'hsl(0deg, 0%, 10%)', // white
+    light: '#4a5568', // white
     dark: 'hsl(0deg, 0%, 100%)', // near-black
   },
   background: {
@@ -8,8 +8,12 @@ export const COLORS = {
     dark: 'hsl(250deg, 70%, 7%)', // navy navy blue
   },
   primary: {
-    light: 'hsl(340deg, 100%, 40%)', // Pinkish-red
-    dark: 'hsl(50deg, 100%, 50%)', // Yellow
+    light: '#f9a933', // Pinkish-red
+    dark: '#f9a933', // Yellow
+  },
+  'primary-rgb': {
+    light: '249, 169, 51',
+    dark: '249, 169, 51',
   },
   secondary: {
     light: 'hsl(250deg, 100%, 50%)', // Purplish-blue
@@ -31,4 +35,5 @@ export const COLORS = {
 }
 
 export const COLOR_MODE_KEY = 'color-mode'
+
 export const INITIAL_COLOR_MODE_CSS_PROP = '--initial-color-mode'

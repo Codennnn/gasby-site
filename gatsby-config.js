@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: 'gatsby-site',
@@ -6,8 +8,17 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-alias-imports',
+      options: {
+        alias: {
+          '@': path.resolve(__dirname, 'src'),
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-sass',
     },
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -37,29 +48,7 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-          //   {
-          //     resolve: `gatsby-remark-images`,
-          //     options: {
-          //       maxWidth: 590,
-          //       linkImagesToOriginal: false,
-          //     },
-          //   },
-          //   {
-          //     resolve: 'gatsby-remark-images-medium-zoom',
-          //   },
         ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-eslint',
-      options: {
-        test: /\.js$|\.jsx$/,
-        exclude: /(node_modules|.cache|public)/,
-        stages: ['develop'],
-        options: {
-          emitWarning: true,
-          failOnError: false,
-        },
       },
     },
   ],

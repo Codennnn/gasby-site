@@ -8,35 +8,43 @@
   min-height: calc(100vh - #{var.$header-height});
   margin: 0 auto;
 
-  .avatar-wrapper {
+  .avatar-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
+    background-color: rgba(var(--color-primary-rgb), 0.3);
     border-radius: 50%;
 
     .avatar {
-      width: 5rem;
+      width: 64%;
     }
   }
 
-  .text {
-    font-weight: 700;
+  .greeting {
+    margin-top: 2.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5rem 0;
+    font-weight: bold;
+    font-size: 5rem;
+  }
+
+  .intro-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+    font-weight: bold;
+    font-size: 1.2rem;
     line-height: 1.5;
-    text-align: center;
-
-    &.text-1 {
-      font-size: 1.5rem;
-    }
-
-    &.text-2 {
-      font-size: 4rem;
-    }
-
-    &.text-3 {
-      font-size: 1.125rem;
-    }
   }
 
   .about {
@@ -44,22 +52,26 @@
     width: 10rem;
     height: 3rem;
     margin-bottom: 2rem;
+    color: var(--color-background);
     line-height: 3rem;
     text-align: center;
+    background-color: var(--color-text);
     border-radius: 1.5rem;
   }
 }
 
 @media (max-width: var.$mobile) {
   .home {
-    .text {
-      &.text-2 {
-        font-size: 1.5rem;
-      }
+    .greeting {
+      font-size: 1.2rem;
+    }
 
-      &.text-3 {
-        font-size: 0.8rem;
-      }
+    .hero-text {
+      font-size: 1.8rem;
+    }
+
+    .intro-text {
+      font-size: 0.8rem;
     }
   }
 }
