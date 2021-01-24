@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
+import SEO from '@/components/SEO'
 import Layout from '@/components/layout'
 
 import '@/styles/blog.scss'
@@ -10,6 +11,8 @@ export default function BlogPage({ data }) {
 
   return (
     <Layout>
+      <SEO />
+
       <div className="blog">
         <div>
           {posts

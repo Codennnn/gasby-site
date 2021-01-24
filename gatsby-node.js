@@ -18,14 +18,19 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       // createFilePath returns a path with the leading "/".
       value: `/blog${value}`,
     })
+    createNodeField({
+      name: `collection`,
+      node,
+      value: getNode(node.parent).sourceInstanceName,
+    })
   }
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  const result = await graphql(`
+  const postsResult = await graphql(`
     query {
-      allMdx {
+      allMdx(filter: { fields: { collection: { eq: "posts" } } }) {
         edges {
           node {
             id
@@ -37,11 +42,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     }
   `)
-  if (result.errors) {
+  if (postsResult.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
   // Create blog post pages.
-  const posts = result.data.allMdx.edges
+  const posts = postsResult.data.allMdx.edges
   // you'll call `createPage` for each result
   posts.forEach(({ node }) => {
     createPage({

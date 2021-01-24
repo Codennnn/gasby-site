@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
 
 import Layout from '@/components/layout'
+import SEO from '@/components/SEO'
 
 import '@/styles/article.scss'
 
@@ -13,6 +14,8 @@ const shortcodes = { Link }
 export default function BlogLayout({ data: { mdx } }) {
   return (
     <Layout>
+      <SEO postData={mdx.frontmatter} />
+
       <article className="blog-article">
         <MDXProvider components={shortcodes}>
           <MDXRenderer>{mdx.body}</MDXRenderer>

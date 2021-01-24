@@ -1,11 +1,24 @@
 const path = require('path')
+const config = require('./config/website')
 
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-site',
-    description: 'go go go',
-    author: `@LeoKu`,
+    title: config.siteTitle,
+    description: config.siteDescription,
+    author: { name: config.author },
+    keywords: [
+      'Software Engineer',
+      'React Training',
+      'Testing JavaScript Training',
+    ],
+    image: config.siteLogo,
+    social: {
+      wechat: config.wechat,
+      weibo: config.weibo,
+      github: config.github,
+    },
   },
+
   plugins: [
     {
       resolve: 'gatsby-plugin-alias-imports',
@@ -15,10 +28,11 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-plugin-sass',
-    },
+
+    'gatsby-plugin-sass',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-react-helmet',
+
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -26,6 +40,7 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
+
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -33,6 +48,7 @@ module.exports = {
         path: `${__dirname}/content/posts/`,
       },
     },
+
     {
       resolve: 'gatsby-plugin-mdx',
       options: {

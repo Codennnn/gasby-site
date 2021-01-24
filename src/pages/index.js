@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import SEO from '@/components/SEO'
 import Layout from '@/components/layout'
 import TextLine from '@/components/TextLine'
 
@@ -9,6 +10,8 @@ import '@/styles/home.scss'
 export default function HomePage() {
   return (
     <Layout>
+      <SEO />
+
       <div className="home">
         <div className="avatar-box">
           <img
