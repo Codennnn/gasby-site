@@ -23,6 +23,7 @@ function SEO({
         )}
         <meta name="description" content={description} />
         <meta name="image" content={image} />
+        <link rel="icon" href="/favicon.ico" />
       </Helmet>
     </>
   )
