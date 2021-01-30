@@ -44,6 +44,7 @@ jobs:
       run: |
         cd ./public
         git init
+        git branch -m main
         git config --local user.name "LeoKu"
         git config --local user.email "czc12580520@gmail.com"
         git add .
