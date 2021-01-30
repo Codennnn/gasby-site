@@ -5,6 +5,8 @@ module.exports = {
   siteMetadata: {
     title: config.siteTitle,
     description: config.siteDescription,
+    favicon: config.siteIcon,
+    language: config.lang,
     author: { name: config.author },
     keywords: [
       'Software Engineer',

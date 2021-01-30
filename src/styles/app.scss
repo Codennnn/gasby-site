@@ -2,7 +2,12 @@
 
 html,
 body {
+  scroll-behavior: smooth;
   font-size: 16px;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
 }
 
 body {

@@ -5,25 +5,25 @@ import { Helmet } from 'react-helmet'
 function SEO({
   siteMetadata: seo,
   postData,
-  metaImage,
   frontmatter: postMeta = postData || {},
   title = postMeta.title,
   description = postMeta.plainTextDescription ||
     postMeta.description ||
     seo.description,
-  image = `${metaImage}`,
 }) {
   return (
     <>
       <Helmet>
+        <html lang={seo.language} />
+
         {title ? (
           <title>{`${postMeta.title} - ${seo.title}`}</title>
         ) : (
           <title>{seo.title}</title>
         )}
+
         <meta name="description" content={description} />
-        <meta name="image" content={image} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={seo.favicon} />
       </Helmet>
     </>
   )
@@ -39,6 +39,8 @@ function SEOWithQuery(props) {
           title
           description
           image
+          favicon
+          language
           author {
             name
           }

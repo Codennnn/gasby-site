@@ -3,10 +3,12 @@ module.exports = {
   siteTitleAlt: '陈梓聪的博客', // Alternative Site title for SEO
   siteTitleShort: '陈梓聪的博客', // short_name for manifest
   siteUrl: 'https://leoku.top', // Domain of your site. No trailing slash!
+  siteIcon: '/favicon.ico',
   lang: 'zh-CN', // Tag on <html> element
   pathPrefix: '/',
   siteLogo: 'images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
-  siteDescription: '热爱探索的人，来关注陈梓聪的个人博客获取让你惊喜的编程技巧',
+  siteDescription:
+    '热爱探索的人，快来关注陈梓聪的个人博客吧，这里有让你惊喜的编程技巧',
   author: '陈梓聪 LeoKu', // Author for schemaORGJSONLD
 
   // Manifest and Progress color
