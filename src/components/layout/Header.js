@@ -11,6 +11,10 @@ export default function Header() {
       name: 'Blog',
     },
     {
+      url: '/about',
+      name: 'About',
+    },
+    {
       url: 'https://github.com/Codennnn',
       name: 'GitHub',
     },

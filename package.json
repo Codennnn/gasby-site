@@ -14,7 +14,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "ghpages": "node gh-pages.js",
+    "ghpages": "gh-pages -d public",
     "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
