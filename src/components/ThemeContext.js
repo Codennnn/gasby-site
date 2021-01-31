@@ -4,12 +4,12 @@ import {
   COLORS,
   COLOR_MODE_KEY,
   INITIAL_COLOR_MODE_CSS_PROP,
-} from '../../config/theme'
+} from '~/config/theme'
 
 export const ThemeContext = React.createContext()
 
 export const ThemeProvider = ({ children }) => {
-  const [colorMode, rawSetColorMode] = React.useState(undefined)
+  const [colorMode, rawSetColorMode] = React.useState('light')
 
   React.useEffect(() => {
     const root = window.document.documentElement

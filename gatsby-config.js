@@ -26,6 +26,7 @@ module.exports = {
       resolve: 'gatsby-plugin-alias-imports',
       options: {
         alias: {
+          '~': path.resolve(__dirname),
           '@': path.resolve(__dirname, 'src'),
         },
       },
@@ -67,6 +68,15 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
       },
     },
   ],

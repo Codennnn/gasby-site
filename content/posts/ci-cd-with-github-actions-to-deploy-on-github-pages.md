@@ -1,8 +1,9 @@
 ---
 title: 持续集成：使用 GitHub Actions 来帮你的应用自动化部署到 GitHub Pages
+createdAt: 2020-10-06
+updatedAt: 2020-10-06
 ---
 
-# 持续集成：使用 GitHub Actions 来帮你的应用自动化部署到 GitHub Pages
 
 前文我们介绍了[如何将 Vue 应用部署到 GitHub Pages](/blog/deploy-vue-app-to-github-pages)，考虑以下场景：在你每次对代码变动时，都要手动执行 `npm run build` 操作来构建文件，然后再将构建好的文件推送到 `gh-pages` 分支来重新部署 GitHub Pages。这些操作是一成不变且耗时耗力的，那么能否让机器替代我们来执行它们，好让部署变得“水到渠成”呢？本文将介绍如何使用 [GitHub Actions](https://github.com/features/actions) 来解放我们枯燥的工作。
 

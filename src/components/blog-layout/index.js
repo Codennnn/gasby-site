@@ -3,11 +3,44 @@ import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 import Layout from '@/components/layout'
 import SEO from '@/components/SEO'
 
-import '@/styles/article.scss'
+const Article = styled.article`
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  h2 {
+    margin-top: -3.1rem;
+    padding-top: 4.6rem;
+    font-weight: bold;
+    font-size: 1.65rem;
+  }
+
+  p {
+    margin: 1.5rem 0;
+    line-height: 1.8;
+  }
+
+  img {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1.5rem rgba(var(--color-text-rgb), 0.1);
+  }
+`
+
+const Title = styled.h1`
+  margin-bottom: 3rem;
+  font-weight: bold;
+  font-size: 2.2rem;
+  line-height: 1.5;
+`
+
+const Date = styled.div`
+  text-align: ceter;
+`
 
 const shortcodes = { Link }
 
@@ -16,11 +49,14 @@ export default function BlogLayout({ data: { mdx } }) {
     <Layout>
       <SEO postData={mdx.frontmatter} />
 
-      <article className="blog-article">
+      <Article>
+        <Title>{mdx.frontmatter.title}</Title>
+        <Date>更新于 {mdx.frontmatter.updatedAt}</Date>
+
         <MDXProvider components={shortcodes}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
-      </article>
+      </Article>
     </Layout>
   )
 }
@@ -32,6 +68,8 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        createdAt
+        updatedAt
       }
     }
   }
