@@ -29,7 +29,7 @@ function SEO({
   )
 }
 
-function SEOWithQuery(props) {
+export default function SEOWithQuery(props) {
   const {
     site: { siteMetadata },
   } = useStaticQuery(graphql`
@@ -54,5 +54,3 @@ function SEOWithQuery(props) {
   `)
   return <SEO siteMetadata={siteMetadata} {...props} />
 }
-
-export default SEOWithQuery

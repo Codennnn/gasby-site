@@ -2,68 +2,6 @@
 
 $header-side-padding: 1.5rem;
 
-.app {
-  padding-top: var.$header-height;
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: var.$header-height;
-  padding: 0 $header-side-padding;
-  color: var(--color-text);
-
-  &::before,
-  &::after {
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    content: '';
-  }
-
-  &::before {
-    backdrop-filter: blur(4px) saturate(200%);
-  }
-
-  &::after {
-    background: hsla(0, 0%, 100%, 0.66667);
-  }
-
-  .site-name {
-    position: absolute;
-    left: $header-side-padding;
-    margin-right: 4rem;
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-
-    .nav-item {
-      padding: 0 1.2rem;
-    }
-  }
-
-  .actions {
-    position: absolute;
-    right: $header-side-padding;
-  }
-}
-
-.footer {
-  //
-}
-
 @media (max-width: var.$mobile) {
   $header-side-padding-mobile: $header-side-padding - 0.5rem;
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { COLORS } from '~/config/theme'
+import { COLORS, SCREENS } from '~/config/theme'
 import { ThemeContext } from '@/components/ThemeContext'
 import SEO from '@/components/SEO'
 import Layout from '@/components/layout'
@@ -11,7 +11,12 @@ const About = styled.div`
   z-index: 110;
   width: 800px;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 3rem 0;
+
+  @media (max-width: ${SCREENS.sm}) {
+    width: auto;
+    padding: 3rem 1rem;
+  }
 `
 
 const Title = styled.h1`

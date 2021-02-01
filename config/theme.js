@@ -38,6 +38,18 @@ export const COLORS = {
   },
 }
 
+export const SCREENS = {
+  sm: '480px',
+  md: '768px',
+  lg: '976px',
+  xl: '1440px',
+}
+
+export const LAYOUT = {
+  headerHeight: '3.6rem',
+  headerSidePadding: '1.5rem',
+}
+
 export const COLOR_MODE_KEY = 'color-mode'
 
 export const INITIAL_COLOR_MODE_CSS_PROP = '--initial-color-mode'
