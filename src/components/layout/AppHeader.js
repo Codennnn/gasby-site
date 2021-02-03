@@ -40,9 +40,16 @@ const Header = styled.header`
   .site-name {
     position: absolute;
     left: ${LAYOUT.headerSidePadding};
+    display: flex;
+    align-items: center;
     margin-right: 4rem;
     font-weight: bold;
     font-size: 1.5rem;
+
+    .logo {
+      width: 2.5rem;
+      margin-right: 1rem;
+    }
   }
 
   .nav-links {
@@ -78,8 +85,8 @@ export default function AppHeader() {
 
   return (
     <Header className="header">
-      <img src="../../images/logo.png" alt="Logo" />
       <Link className="site-name" to="/">
+        <img src="/logo.png" alt="Logo" className="logo" />
         LeoKu
       </Link>
 

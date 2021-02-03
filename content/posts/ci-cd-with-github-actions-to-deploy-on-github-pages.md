@@ -1,7 +1,7 @@
 ---
 title: 持续集成：使用 GitHub Actions 来帮你的应用自动化部署到 GitHub Pages
-createdAt: 2020-10-06
-updatedAt: 2020-10-06
+createdAt: '2020-10-06'
+updatedAt: '2020-10-06'
 ---
 
 
