@@ -1,19 +1,19 @@
 export const COLORS = {
   text: {
     light: '#4a5568',
-    dark: '#999',
+    dark: '#f5f7fa',
   },
   'text-rgb': {
     light: '74, 85, 104',
     dark: 'hsl(0deg, 0%, 100%)',
   },
   background: {
-    light: 'hsl(0deg, 0%, 100%)', // white
-    dark: '#374151', // navy navy blue
+    light: '#fff',
+    dark: '#1f2933',
   },
   primary: {
-    light: '#f9a933', // Pinkish-red
-    dark: '#f9a933', // Yellow
+    light: '#f9a933',
+    dark: '#f9a933',
   },
   'primary-rgb': {
     light: '249, 169, 51',

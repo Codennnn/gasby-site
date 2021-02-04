@@ -34,7 +34,7 @@ const Header = styled.header`
   }
 
   &::after {
-    background: hsla(0, 0%, 100%, 0.66667);
+    background: var(--color-bg);
   }
 
   .site-name {
