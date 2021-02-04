@@ -13,17 +13,20 @@ export const COLORS = {
   },
   primary: {
     light: '#f9a933',
-    dark: '#f9a933',
+    dark: '#eeba28',
   },
   'primary-rgb': {
     light: '249, 169, 51',
     dark: '249, 169, 51',
   },
   secondary: {
-    light: 'hsl(250deg, 100%, 50%)', // Purplish-blue
-    dark: 'hsl(190deg, 100%, 40%)', // Cyan
+    light: 'hsl(250deg, 100%, 50%)',
+    dark: 'hsl(190deg, 100%, 40%)',
   },
-  // Grays, scaling from least-noticeable to most-noticeable
+  text100: {
+    light: '#1f2933',
+    dark: '#e4e7eb',
+  },
   gray300: {
     light: '#8b97ac',
     dark: 'hsl(0deg, 0%, 30%)',

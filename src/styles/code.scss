@@ -9,17 +9,27 @@
 
   pre,
   pre[class*='language-'] {
+    position: relative;
     margin: 0.85rem 0;
     padding: 1.25rem 1.5rem;
     overflow: auto;
     line-height: 1.4;
-    // background-color: $codeBgColor;
     border-radius: 6px;
+
+    &::before {
+      position: absolute;
+      top: 0.2rem;
+      right: 0.5rem;
+    }
 
     code {
       padding: 0;
       background-color: transparent;
       border-radius: 0;
     }
+  }
+
+  pre[class~='language-sh']::before {
+    content: 'shell';
   }
 }

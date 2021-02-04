@@ -1,6 +1,6 @@
 ---
 title: 如何将 Vue 应用部署到 GitHub Pages
-createdAt: 2019-06-12
+createdAt: '2020-08-12'
 ---
 
 

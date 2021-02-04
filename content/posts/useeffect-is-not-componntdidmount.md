@@ -1,7 +1,6 @@
 ---
 title: useEffect(fn, []) 并不是 componentDidMount() 的替代品
-createdAt: '2019-06-12'
-updatedAt: '2019-06-12'
+createdAt: '2021-02-05'
 ---
 
 

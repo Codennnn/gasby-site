@@ -58,6 +58,10 @@ const Header = styled.header`
 
     .nav-item {
       padding: 0 1.2rem;
+
+      a.active {
+        color: var(--color-primary);
+      }
     }
   }
 
@@ -98,7 +102,9 @@ export default function AppHeader() {
                 {name}
               </a>
             ) : (
-              <Link to={url}>{name}</Link>
+              <Link to={url} partiallyActive activeClassName="active">
+                {name}
+              </Link>
             )}
           </div>
         ))}

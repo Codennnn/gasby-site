@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
+import { SCREENS } from '~/config/theme'
 import Layout from '@/components/layout'
 import SEO from '@/components/SEO'
 
@@ -25,9 +26,17 @@ const Article = styled.article`
     line-height: 1.8;
   }
 
+  a {
+    color: var(--color-primary);
+  }
+
   img {
     border-radius: 0.5rem;
     box-shadow: 0 0 1.5rem rgba(var(--color-text-rgb), 0.1);
+  }
+
+  @media (max-width: ${SCREENS.sm}) {
+    padding: 4rem 1.5rem;
   }
 `
 
