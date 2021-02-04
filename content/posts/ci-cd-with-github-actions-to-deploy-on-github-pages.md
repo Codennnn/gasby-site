@@ -5,7 +5,7 @@ updatedAt: '2020-10-06'
 ---
 
 
-前文我们介绍了[如何将 Vue 应用部署到 GitHub Pages](/blog/deploy-vue-app-to-github-pages)，考虑以下场景：在你每次对代码变动时，都要手动执行 `npm run build` 操作来构建文件，然后再将构建好的文件推送到 `gh-pages` 分支来重新部署 GitHub Pages。这些操作是一成不变且耗时耗力的，那么能否让机器替代我们来执行它们，好让部署变得“水到渠成”呢？本文将介绍如何使用 [GitHub Actions](https://github.com/features/actions) 来解放我们枯燥的工作。
+前文我们介绍了[如何将 Vue 应用部署到 GitHub Pages](/blog/deploy-vue-app-to-github-pages)，现在考虑以下场景：在你每次对代码变动时，都要手动执行 `npm run build` 操作来构建文件，然后再将构建好的文件推送到 `gh-pages` 分支来重新部署 GitHub Pages。这些操作是一成不变且耗时耗力的，那么能否让机器替代我们来执行它们，好让部署变得“水到渠成”呢？本文将介绍如何使用 [GitHub Actions](https://github.com/features/actions) 来解放我们枯燥的工作。
 
 请注意，本文不是 GitHub Actions 的教程，如果你还不熟悉什么是 GitHub Actions，不妨读一读阮一峰的 [GitHub Actions 入门教程](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)。
 
@@ -63,7 +63,7 @@ jobs:
     - name: Push to gh-pages
       env:
         # 填写项目所在仓库地址
-        GITHUB_REPO: github.com/Chinesee/venus.git
+        GITHUB_REPO: github.com/Codennnn/venus.git
       run: |
         cd ./dist
         git init
