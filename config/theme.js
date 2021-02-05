@@ -51,6 +51,7 @@ export const SCREENS = {
 export const LAYOUT = {
   headerHeight: '3.6rem',
   headerSidePadding: '1.5rem',
+  footerHeight: '3.6rem',
 }
 
 export const COLOR_MODE_KEY = 'color-mode'

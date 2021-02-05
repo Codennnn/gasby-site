@@ -44,9 +44,9 @@ function CanvasConfetti() {
         disableForReducedMotion: true,
       })
 
-      const end = Date.now() + 1 * 1000
+      const deadline = performance.now() + 1 * 1000
 
-      const colors = [COLORS.primary[colorMode], '#eee']
+      const colors = [COLORS.primary[colorMode], COLORS.gray300[colorMode]]
 
       void (function frame() {
         myConfetti({
@@ -64,7 +64,7 @@ function CanvasConfetti() {
           colors: colors,
         })
 
-        if (Date.now() < end) {
+        if (performance.now() < deadline) {
           requestAnimationFrame(frame)
         }
       })()
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
       <CanvasConfetti />
       <About>
-        <Title>大家好！我叫陈梓聪 😉，欢迎来到我的个人博客~</Title>
+        <Title>大家好！我叫陈梓聪 😉，欢迎来到我的个人博客</Title>
 
         <Paragraph>
           我是广东东莞人，我的大学就读于广州大学华软软件学院（现在已经改名为广州软件学院）。

@@ -1,19 +1,20 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
+
+import { LAYOUT } from '~/config/theme'
 
 const Footer = styled.footer`
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: ${LAYOUT.footerHeight};
 `
 
 export default function AppFooter() {
   return (
     <Footer>
-      <div>LeoKu</div>
-
-      <Link to="/blog" className="">
-        Blog
-      </Link>
+      <div>Made with Gatsby</div>
     </Footer>
   )
 }

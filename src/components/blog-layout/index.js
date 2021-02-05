@@ -60,7 +60,9 @@ export default function BlogLayout({ data: { mdx } }) {
 
       <Article>
         <Title>{mdx.frontmatter.title}</Title>
-        <Date>更新于 {mdx.frontmatter.updatedAt}</Date>
+        <Date>
+          更新于 {mdx.frontmatter.updatedAt || mdx.frontmatter.createdAt}
+        </Date>
 
         <MDXProvider components={shortcodes}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
