@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import { LAYOUT } from '~/config/theme'
 import AppHeader from './AppHeader'
 import AppFooter from './AppFooter'
+import SideMenu from './AppMenu'
 
 const App = styled.div`
+  position: relative;
+  right: 0;
   padding-top: ${LAYOUT.headerHeight};
+  transition: right 0.2s;
+
+  &.show-menu {
+    right: ${LAYOUT.sideMenuWidth};
+  }
 `
 
 const Main = styled.main`
@@ -14,13 +22,23 @@ const Main = styled.main`
 `
 
 export default function Layout({ children }) {
+  const [showMenu, setShowMenu] = useState(false)
+
+  function toggleMenu() {
+    setShowMenu(!showMenu)
+  }
+
   return (
-    <App className="app">
-      <AppHeader />
+    <>
+      <App className={showMenu && 'show-menu'}>
+        <AppHeader toggleMenu={toggleMenu} />
 
-      <Main>{children}</Main>
+        <Main>{children}</Main>
 
-      <AppFooter />
-    </App>
+        <AppFooter />
+      </App>
+
+      <SideMenu visible={showMenu} />
+    </>
   )
 }

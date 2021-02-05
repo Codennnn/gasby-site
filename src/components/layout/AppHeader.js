@@ -2,9 +2,11 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-import { LAYOUT } from '~/config/theme'
-import { isExternal } from '@/utils'
+import { LAYOUT, SCREENS } from '~/config/theme'
+import navItems from '~/config/nav'
 import DarkModeToggle from '../DarkModeToggle'
+import Menu from '@/assets/menu.svg'
+import { isExternal } from '@/utils'
 
 const Header = styled.header`
   position: fixed;
@@ -18,6 +20,7 @@ const Header = styled.header`
   height: ${LAYOUT.headerHeight};
   padding: 0 ${LAYOUT.headerSidePadding};
   color: var(--color-text);
+  background-color: var(--color-background);
 
   &::before,
   &::after {
@@ -29,13 +32,13 @@ const Header = styled.header`
     content: '';
   }
 
-  &::before {
+  /* &::before {
     backdrop-filter: blur(4px) saturate(200%);
-  }
+  } */
 
-  &::after {
+  /* &::after {
     background: var(--color-bg);
-  }
+  } */
 
   .site-name {
     position: absolute;
@@ -51,42 +54,46 @@ const Header = styled.header`
       margin-right: 1rem;
     }
   }
+`
 
-  .nav-links {
-    display: flex;
-    align-items: center;
+const NavLinks = styled.nav`
+  display: flex;
+  align-items: center;
 
-    .nav-item {
-      padding: 0 1.2rem;
+  .nav-item {
+    padding: 0 1.2rem;
 
-      a.active {
-        color: var(--color-primary);
-      }
+    a.active {
+      color: var(--color-primary);
     }
   }
 
-  .actions {
-    position: absolute;
-    right: 1.5rem;
+  @media (max-width: ${SCREENS.sm}) {
+    display: none;
   }
 `
 
-export default function AppHeader() {
-  const navItems = [
-    {
-      url: '/blog',
-      name: 'Blog',
-    },
-    {
-      url: '/about',
-      name: 'About',
-    },
-    {
-      url: 'https://github.com/Codennnn',
-      name: 'GitHub',
-    },
-  ]
+const Actions = styled.div`
+  position: absolute;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
 
+  .toggle-menu {
+    display: none;
+    margin-left: 1rem;
+    fill: #fff;
+    stroke: #fff;
+  }
+
+  @media (max-width: ${SCREENS.sm}) {
+    .toggle-menu {
+      display: block;
+    }
+  }
+`
+
+export default function AppHeader({ toggleMenu }) {
   return (
     <Header className="header">
       <Link className="site-name" to="/">
@@ -94,7 +101,7 @@ export default function AppHeader() {
         LeoKu
       </Link>
 
-      <nav className="nav-links">
+      <NavLinks>
         {navItems.map(({ url, name }) => (
           <div className="nav-item" key={name}>
             {isExternal(url) ? (
@@ -108,11 +115,18 @@ export default function AppHeader() {
             )}
           </div>
         ))}
-      </nav>
+      </NavLinks>
 
-      <div className="actions">
+      <Actions className="actions">
         <DarkModeToggle />
-      </div>
+
+        <Menu
+          className="toggle-menu"
+          onClick={() => {
+            toggleMenu?.()
+          }}
+        />
+      </Actions>
     </Header>
   )
 }

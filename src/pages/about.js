@@ -15,7 +15,7 @@ const About = styled.div`
 
   @media (max-width: ${SCREENS.sm}) {
     width: auto;
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
   }
 `
 
@@ -86,15 +86,11 @@ export default function AboutPage() {
 
       <CanvasConfetti />
       <About>
-        <Title>大家好！我叫陈梓聪 😉，欢迎来到我的个人博客</Title>
+        <Title>大家好 😉，欢迎来到我的个人博客</Title>
 
         <Paragraph>
-          我是广东东莞人，我的大学就读于广州大学华软软件学院（现在已经改名为广州软件学院）。
-        </Paragraph>
-
-        <Paragraph>
-          2020
-          年毕业于软件工程专业后，我开始作为一名前端开发者参加工作，目前也居住在东莞。
+          我叫陈梓聪，2020
+          年毕业于软件工程专业后，我开始作为一名前端开发者参加工作，目前居住在东莞。
         </Paragraph>
 
         <Paragraph>

@@ -52,6 +52,7 @@ export const LAYOUT = {
   headerHeight: '3.6rem',
   headerSidePadding: '1.5rem',
   footerHeight: '3.6rem',
+  sideMenuWidth: '80vw',
 }
 
 export const COLOR_MODE_KEY = 'color-mode'
