@@ -11,7 +11,7 @@ const About = styled.div`
   z-index: 110;
   width: 800px;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 6rem 0;
 
   @media (max-width: ${SCREENS.sm}) {
     width: auto;
@@ -46,18 +46,18 @@ function CanvasConfetti() {
 
       const deadline = performance.now() + 1 * 1000
 
-      const colors = [COLORS.primary[colorMode], COLORS.gray300[colorMode]]
+      const colors = [COLORS.accent[colorMode], '#a864fd', '#ff718d']
 
       void (function frame() {
         myConfetti({
-          particleCount: 2,
+          particleCount: colors.length,
           angle: 60,
           spread: 55,
           origin: { x: 0 },
           colors: colors,
         })
         myConfetti({
-          particleCount: 2,
+          particleCount: colors.length,
           angle: 120,
           spread: 55,
           origin: { x: 1 },
@@ -86,7 +86,7 @@ export default function AboutPage() {
 
       <CanvasConfetti />
       <About>
-        <Title>大家好 😉，欢迎来到我的个人博客</Title>
+        <Title>😉，欢迎来到我的个人博客</Title>
 
         <Paragraph>
           我叫陈梓聪，2020

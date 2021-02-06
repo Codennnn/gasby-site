@@ -6213,6 +6213,14 @@ gatsby-plugin-mdx@^1.8.0:
     unist-util-remove "^1.0.3"
     unist-util-visit "^1.4.1"
 
+gatsby-plugin-nprogress@^2.10.0:
+  version "2.10.0"
+  resolved "https://registry.npm.taobao.org/gatsby-plugin-nprogress/download/gatsby-plugin-nprogress-2.10.0.tgz#93c3413bf23fda7db16bd84d1550c16438f0bd5e"
+  integrity sha1-k8NBO/I/2n2xa9hNFVDBZDjwvV4=
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    nprogress "^0.2.0"
+
 gatsby-plugin-page-creator@^2.8.0:
   version "2.8.0"
   resolved "https://registry.npm.taobao.org/gatsby-plugin-page-creator/download/gatsby-plugin-page-creator-2.8.0.tgz#5523fd1dc59c0cfe266b1ad96e2bc4f9cc6efcc8"
@@ -9661,6 +9669,11 @@ npm-run-path@^4.0.0:
   integrity sha1-t+zR5e1T2o43pV4cImnguX7XSOo=
   dependencies:
     path-key "^3.0.0"
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npm.taobao.org/nprogress/download/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+  integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
 nth-check@^1.0.1, nth-check@^1.0.2, nth-check@~1.0.1:
   version "1.0.2"

@@ -64,7 +64,7 @@ const NavLinks = styled.nav`
     padding: 0 1.2rem;
 
     a.active {
-      color: var(--color-primary);
+      color: var(--color-accent);
     }
   }
 
@@ -93,7 +93,7 @@ const Actions = styled.div`
   }
 `
 
-export default function AppHeader({ toggleMenu }) {
+export default function AppHeader({ toggleAside }) {
   return (
     <Header className="header">
       <Link className="site-name" to="/">
@@ -123,7 +123,7 @@ export default function AppHeader({ toggleMenu }) {
         <Menu
           className="toggle-menu"
           onClick={() => {
-            toggleMenu?.()
+            toggleAside?.()
           }}
         />
       </Actions>

@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="-450 -450 900 900">
-  <path d="M-417,4 C-248,-75 65,-128 434,-49" stroke="rgba(247, 148, 0, 0.6)" stroke-width="25px" fill="transparent" stroke-linecap="round" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="-450 -450 900 900"><path d="M-417 4c169-79 482-132 851-53" stroke-width="25" fill="transparent" stroke-linecap="round" stroke="var(--color-accent)"/></svg>

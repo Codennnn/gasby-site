@@ -6,18 +6,18 @@ import { LAYOUT } from '~/config/theme'
 import navItems from '~/config/nav'
 import { isExternal } from '@/utils'
 
-const Menu = styled.div`
+const Sidebar = styled.aside`
   position: fixed;
   top: 0;
   left: 100vw;
-  width: ${LAYOUT.sideMenuWidth};
+  width: ${LAYOUT.sidebarWidth};
   height: 100vh;
   padding-top: ${LAYOUT.headerHeight};
   background-color: var(--color-background);
-  transition: left 0.2s;
+  transition: left 0.2s ease-out;
 
   &.show {
-    left: calc(100vw - ${LAYOUT.sideMenuWidth});
+    left: calc(100vw - ${LAYOUT.sidebarWidth});
   }
 `
 
@@ -41,9 +41,9 @@ const NavLinks = styled.nav`
   }
 `
 
-export default function AppFooter({ visible }) {
+export default function AppFooter({ visible = false }) {
   return (
-    <Menu className={visible && 'show'}>
+    <Sidebar className={visible && 'show'}>
       <NavLinks>
         {navItems.map(({ url, name }) => (
           <div className="nav-item" key={name}>
@@ -59,6 +59,6 @@ export default function AppFooter({ visible }) {
           </div>
         ))}
       </NavLinks>
-    </Menu>
+    </Sidebar>
   )
 }

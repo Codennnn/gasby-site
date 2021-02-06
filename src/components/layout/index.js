@@ -4,41 +4,46 @@ import styled from 'styled-components'
 import { LAYOUT } from '~/config/theme'
 import AppHeader from './AppHeader'
 import AppFooter from './AppFooter'
-import SideMenu from './AppMenu'
+import Sidebar from './Sidebar'
 
 const App = styled.div`
   position: relative;
   right: 0;
   padding-top: ${LAYOUT.headerHeight};
-  transition: right 0.2s;
+  transition: right 0.2s ease-out;
 
-  &.show-menu {
-    right: ${LAYOUT.sideMenuWidth};
+  &.show-aside {
+    right: ${LAYOUT.sidebarWidth};
   }
 `
 
 const Main = styled.main`
   min-height: calc(100vh - ${LAYOUT.headerHeight} - ${LAYOUT.footerHeight});
+  transition: opacity 0.2s ease-out;
+
+  &.show-aside {
+    opacity: 0.25;
+  }
 `
 
 export default function Layout({ children }) {
-  const [showMenu, setShowMenu] = useState(false)
-
-  function toggleMenu() {
-    setShowMenu(!showMenu)
-  }
+  const [showAside, setShowAside] = useState(false)
 
   return (
     <>
-      <App className={showMenu && 'show-menu'}>
-        <AppHeader toggleMenu={toggleMenu} />
+      <App className={showAside && 'show-aside'}>
+        <AppHeader
+          toggleAside={() => {
+            setShowAside(!showAside)
+          }}
+        />
 
-        <Main>{children}</Main>
+        <Main className={showAside && 'show-aside'}>{children}</Main>
 
         <AppFooter />
       </App>
 
-      <SideMenu visible={showMenu} />
+      <Sidebar visible={showAside} />
     </>
   )
 }

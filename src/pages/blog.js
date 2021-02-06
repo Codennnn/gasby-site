@@ -36,7 +36,7 @@ const Article = styled(Link)`
   }
 
   .read-more {
-    color: var(--color-primary);
+    color: var(--color-accent);
     font-weight: 500;
     font-size: 1.1rem;
   }

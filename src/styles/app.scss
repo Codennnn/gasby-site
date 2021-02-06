@@ -22,3 +22,19 @@ body {
 ::selection {
   background: rgba(var(--color-primary-rgb), 0.15);
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border: none;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--color-background);
+}

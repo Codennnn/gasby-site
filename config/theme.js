@@ -11,13 +11,21 @@ export const COLORS = {
     light: '#fff',
     dark: '#1f2933',
   },
-  primary: {
+  accent: {
     light: '#f9a933',
     dark: '#eeba28',
   },
+  'accent-rgb': {
+    light: '249, 169, 51',
+    dark: '238, 186, 40',
+  },
+  primary: {
+    light: '#f9a933',
+    dark: '#cbd2d9',
+  },
   'primary-rgb': {
     light: '249, 169, 51',
-    dark: '249, 169, 51',
+    dark: '203, 210, 217',
   },
   secondary: {
     light: 'hsl(250deg, 100%, 50%)',
@@ -52,7 +60,7 @@ export const LAYOUT = {
   headerHeight: '3.6rem',
   headerSidePadding: '1.5rem',
   footerHeight: '3.6rem',
-  sideMenuWidth: '80vw',
+  sidebarWidth: '70vw',
 }
 
 export const COLOR_MODE_KEY = 'color-mode'

@@ -73,6 +73,14 @@ module.exports = {
     },
 
     {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: '#f9a933',
+        showSpinner: false,
+      },
+    },
+
+    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {

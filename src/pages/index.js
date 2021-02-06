@@ -58,7 +58,7 @@ const HeroText = styled.section`
 
 const Underline = styled(Underscore)`
   position: absolute;
-  top: -0.6em;
+  top: -0.55em;
   left: 1.4em;
   z-index: -1;
   transform: scale(1.1);
@@ -88,6 +88,7 @@ const AboutMe = styled(Link)`
   height: 3rem;
   margin-bottom: 2rem;
   color: var(--color-background);
+  font-weight: bold;
   line-height: 3rem;
   text-align: center;
   background-color: var(--color-text);
