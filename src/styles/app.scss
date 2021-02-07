@@ -20,7 +20,7 @@ body {
 }
 
 ::selection {
-  background: rgba(var(--color-primary-rgb), 0.15);
+  background: hsla(var(--color-primary-hsl), 0.15);
 }
 
 ::-webkit-scrollbar {

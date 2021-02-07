@@ -27,12 +27,12 @@ const Article = styled.article`
   }
 
   a {
-    color: var(--color-primary);
+    color: var(--color-accent);
   }
 
   img {
     border-radius: 0.5rem;
-    box-shadow: 0 0 1.5rem rgba(var(--color-text-rgb), 0.1);
+    box-shadow: 0 0 1.5rem hsla(var(--color-text-hsl), 0.1);
   }
 
   @media (max-width: ${SCREENS.sm}) {

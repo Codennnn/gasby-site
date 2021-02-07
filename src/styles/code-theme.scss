@@ -7,9 +7,9 @@ code[class*='language-'],
 pre[class*='language-'] {
   max-height: 80vh;
   color: #9dadff;
-  font-size: 1.08em;
+  font-size: 1.06em;
   font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace;
-  line-height: 1.5;
+  line-height: 1.4;
   white-space: pre;
   text-align: left;
   word-wrap: normal;
@@ -23,6 +23,11 @@ pre[class*='language-'] {
   -ms-hyphens: none;
   hyphens: none;
   background: #25293e;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    line-height: 1;
+  }
 }
 
 /* 代码块 */
@@ -36,9 +41,9 @@ pre[class*='language-'] {
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] :not(pre) > code[class*='language-'] {
   padding: 0.2rem 0.5rem;
-  color: #4a5568;
+  color: var(--color-text);
   white-space: normal;
-  background-color: rgba(27, 31, 35, 0.05);
+  background-color: var(--color-text900);
   border-radius: 0.3em;
 }
 

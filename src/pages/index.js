@@ -23,7 +23,7 @@ const Avatar = styled.div`
   justify-content: center;
   width: 10rem;
   height: 10rem;
-  background-color: rgba(var(--color-primary-rgb), 0.3);
+  background-color: hsla(var(--color-primary-hsl), 0.3);
   border-radius: 50%;
 
   .avatar {
