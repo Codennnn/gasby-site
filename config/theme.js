@@ -19,6 +19,10 @@ export const COLORS = {
     light: 'hsl(36, 94%, 59%)',
     dark: 'hsl(210, 16%, 82%)',
   },
+  'primary-hex': {
+    light: '#f9aa34',
+    dark: '#ffcc99',
+  },
   'primary-hsl': {
     light: '36, 94%, 59%',
     dark: '210, 16%, 82%',

@@ -45,8 +45,9 @@ function CanvasConfetti() {
       })
 
       const deadline = performance.now() + 1 * 1000
+      console.log(colorMode)
 
-      const colors = [COLORS.accent[colorMode], '#a864fd', '#ff718d']
+      const colors = [COLORS['primary-hex'][colorMode], '#a864fd', '#ff718d']
 
       void (function frame() {
         myConfetti({
