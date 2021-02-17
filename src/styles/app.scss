@@ -11,9 +11,9 @@ html {
 
 body {
   color: var(--color-text);
-  font-family: -apple-system, Rubik, Segoe UI, Roboto, Helvetica Neue,
-    PingFang SC, Noto Sans, Noto Sans CJK SC, Microsoft YaHei, 微软雅黑,
-    sans-serif;
+  font-family: -apple-system, Rubik, '思源黑体', Segoe UI, Roboto,
+    Helvetica Neue, PingFang SC, Noto Sans, Noto Sans CJK SC, Microsoft YaHei,
+    微软雅黑, sans-serif;
   background: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,11 +30,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #c0c0c0;
+  background-color: hsla(var(--color-text-hsl), 0.3);
   border: none;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track-piece {
-  background-color: var(--color-background);
+  background-color: transparent;
 }

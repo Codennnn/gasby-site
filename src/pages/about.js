@@ -87,10 +87,12 @@ export default function AboutPage() {
 
       <CanvasConfetti />
       <About>
-        <Title>😉，欢迎来到我的个人博客</Title>
+        <Title>😉, 欢迎来到我的个人博客</Title>
+
+        <Paragraph>在这里，我会记录一些实用的编程技巧。</Paragraph>
 
         <Paragraph>
-          我叫陈梓聪，2020
+          <b>陈梓聪</b>，这是我的名字。2020
           年毕业于软件工程专业后，我开始作为一名前端开发者参加工作，目前居住在东莞。
         </Paragraph>
 
