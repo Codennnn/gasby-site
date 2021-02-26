@@ -47,7 +47,7 @@ const Article = styled(Link)`
     }
 
     .article-title {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
 
     .article-excerpt {

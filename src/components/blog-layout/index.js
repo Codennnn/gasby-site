@@ -36,6 +36,10 @@ const Article = styled.article`
   }
 
   @media (max-width: ${SCREENS.sm}) {
+    h2 {
+      font-size: 1.3rem;
+    }
+
     padding: 4rem 1.5rem;
   }
 `
@@ -43,8 +47,9 @@ const Article = styled.article`
 const Title = styled.h1`
   margin-bottom: 3rem;
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   line-height: 1.5;
+  word-wrap: break-word;
 `
 
 const Date = styled.div`

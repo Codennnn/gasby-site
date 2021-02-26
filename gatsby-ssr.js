@@ -12,7 +12,7 @@ import App from './src/components/App'
 function setColorsByTheme() {
   const colors = '🌈'
   const colorModeKey = '🔑'
-  const colorModeCssProp = '⚡️'
+  const colorModeCssProp = '🧁'
 
   const mql = window.matchMedia('(prefers-color-scheme: dark)')
   const prefersDarkFromMQ = mql.matches
@@ -43,7 +43,7 @@ const MagicScriptTag = () => {
   const boundFn = String(setColorsByTheme)
     .replace("'🌈'", JSON.stringify(COLORS))
     .replace('🔑', COLOR_MODE_KEY)
-    .replace('⚡️', INITIAL_COLOR_MODE_CSS_PROP)
+    .replace('🧁', INITIAL_COLOR_MODE_CSS_PROP)
 
   let calledFunction = `(${boundFn})()`
 

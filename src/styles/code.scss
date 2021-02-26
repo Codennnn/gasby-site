@@ -27,6 +27,10 @@
       background-color: transparent;
       border-radius: 0;
     }
+
+    @media (max-width: 480px) {
+      padding: 0.8rem;
+    }
   }
 
   pre[class~='language-sh']::before {
