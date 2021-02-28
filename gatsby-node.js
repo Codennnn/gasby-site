@@ -19,7 +19,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value: `/blog${value}`,
     })
     createNodeField({
-      name: `collection`,
+      name: 'collection',
       node,
       value: getNode(node.parent).sourceInstanceName,
     })
