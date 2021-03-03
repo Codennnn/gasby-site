@@ -6,7 +6,7 @@ import AppHeader from './AppHeader'
 import AppFooter from './AppFooter'
 import Sidebar from './Sidebar'
 
-const App = styled.div`
+const AppLayout = styled.div`
   position: relative;
   right: 0;
   padding-top: ${LAYOUT.headerHeight};
@@ -31,7 +31,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <App className={showAside && 'show-aside'}>
+      <AppLayout className={showAside && 'show-aside'}>
         <AppHeader
           toggleAside={() => {
             setShowAside(!showAside)
@@ -41,7 +41,7 @@ export default function Layout({ children }) {
         <Main className={showAside && 'show-aside'}>{children}</Main>
 
         <AppFooter />
-      </App>
+      </AppLayout>
 
       <Sidebar visible={showAside} />
     </>
