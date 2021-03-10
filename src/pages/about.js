@@ -102,21 +102,23 @@ export default function AboutPage() {
 
         <Paragraph>
           如果你想联系我，这里有我的联系方式：
-          <ul>
-            <li>微信：leoku_new</li>
-            <li>
-              新浪微博：
-              <a
-                style={{ color: 'inherit' }}
-                href="https://weibo.com/leoku4"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                令狐聪Leoku
-              </a>
-            </li>
-            <li>邮箱：czc12580520@gmail.com</li>
-          </ul>
+          <address style={{ fontStyle: 'normal' }}>
+            <ul>
+              <li>微信：leoku_new</li>
+              <li>
+                新浪微博：
+                <a
+                  style={{ color: 'inherit' }}
+                  href="https://weibo.com/leoku4"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  令狐聪Leoku
+                </a>
+              </li>
+              <li>邮箱：czc12580520@gmail.com</li>
+            </ul>
+          </address>
         </Paragraph>
       </About>
     </Layout>
