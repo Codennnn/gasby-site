@@ -28,7 +28,7 @@ function setColorsByTheme() {
     colorMode = prefersDarkFromMQ ? 'dark' : 'light'
   }
 
-  let root = document.documentElement
+  const root = document.documentElement
 
   root.style.setProperty(colorModeCssProp, colorMode)
 

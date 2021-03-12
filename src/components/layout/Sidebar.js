@@ -36,7 +36,7 @@ const NavLinks = styled.nav`
     padding: 0 1.2rem;
 
     a.active {
-      color: var(--color-primary);
+      color: var(--color-accent);
     }
   }
 `
