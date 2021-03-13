@@ -6,7 +6,6 @@ import {
   COLORS,
   INITIAL_COLOR_MODE_CSS_PROP,
 } from './config/theme'
-
 import App from './src/components/App'
 
 function setColorsByTheme() {

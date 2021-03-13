@@ -9,8 +9,19 @@ module.exports = {
     'prettier/babel',
     'prettier/react',
   ],
-  plugins: ['import', 'jsx-a11y', 'prettier', 'react', 'react-hooks'],
+  plugins: [
+    'import',
+    'jsx-a11y',
+    'prettier',
+    'react',
+    'react-hooks',
+    'simple-import-sort',
+  ],
   rules: {
+    'simple-import-sort/imports': 2,
+    'simple-import-sort/exports': 2,
+    'sort-imports': 0,
+    'import/order': 0,
     'prettier/prettier': 2,
   },
 }

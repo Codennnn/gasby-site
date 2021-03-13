@@ -1,13 +1,13 @@
-import React from 'react'
-import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import React from 'react'
 import styled from 'styled-components'
 
-import { SCREENS } from '~/config/theme'
 import Layout from '@/components/layout'
 import SEO from '@/components/SEO'
+import { SCREENS } from '~/config/theme'
 
 const Article = styled.article`
   max-width: 800px;

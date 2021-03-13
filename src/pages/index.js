@@ -1,12 +1,12 @@
-import React from 'react'
 import { Link } from 'gatsby'
+import React from 'react'
 import styled from 'styled-components'
 
-import { LAYOUT, SCREENS } from '~/config/theme'
-import SEO from '@/components/SEO'
-import Layout from '@/components/layout'
-import TextLine from '@/components/TextLine'
 import Underscore from '@/assets/underscore.svg'
+import Layout from '@/components/layout'
+import SEO from '@/components/SEO'
+import TextLine from '@/components/TextLine'
+import { LAYOUT, SCREENS } from '~/config/theme'
 
 const Home = styled.div`
   display: flex;

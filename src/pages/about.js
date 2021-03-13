@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { COLORS, SCREENS } from '~/config/theme'
-import { ThemeContext } from '@/components/ThemeContext'
-import SEO from '@/components/SEO'
 import Layout from '@/components/layout'
+import SEO from '@/components/SEO'
+import { ThemeContext } from '@/components/ThemeContext'
+import { COLORS, SCREENS } from '~/config/theme'
 
 const About = styled.div`
   position: relative;

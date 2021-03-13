@@ -1,8 +1,8 @@
 import React from 'react'
 
 import {
-  COLORS,
   COLOR_MODE_KEY,
+  COLORS,
   INITIAL_COLOR_MODE_CSS_PROP,
 } from '~/config/theme'
 

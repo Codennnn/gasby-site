@@ -1,10 +1,10 @@
-import React from 'react'
 import { Link } from 'gatsby'
+import React from 'react'
 import styled from 'styled-components'
 
-import { LAYOUT } from '~/config/theme'
-import navItems from '~/config/nav'
 import { isExternal } from '@/utils'
+import navItems from '~/config/nav'
+import { LAYOUT } from '~/config/theme'
 
 const Sidebar = styled.aside`
   position: fixed;
