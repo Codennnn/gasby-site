@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import { LAYOUT } from '~/config/theme'
-import AppHeader from './AppHeader'
+
 import AppFooter from './AppFooter'
+import AppHeader from './AppHeader'
 import Sidebar from './Sidebar'
 
 const AppLayout = styled.div`

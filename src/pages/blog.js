@@ -1,10 +1,10 @@
+import { graphql, Link } from 'gatsby'
 import React from 'react'
-import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { SCREENS } from '~/config/theme'
-import SEO from '@/components/SEO'
 import Layout from '@/components/layout'
+import SEO from '@/components/SEO'
+import { SCREENS } from '~/config/theme'
 
 const BlogList = styled.div`
   max-width: 600px;

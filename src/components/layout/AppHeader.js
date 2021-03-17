@@ -1,18 +1,19 @@
-import React from 'react'
 import { Link } from 'gatsby'
+import React from 'react'
 import styled from 'styled-components'
 
-import { LAYOUT, SCREENS } from '~/config/theme'
-import navItems from '~/config/nav'
-import DarkModeToggle from '../DarkModeToggle'
 import Menu from '@/assets/menu.svg'
 import { isExternal } from '@/utils'
+import navItems from '~/config/nav'
+import { LAYOUT, SCREENS } from '~/config/theme'
+
+import DarkModeToggle from '../DarkModeToggle'
 
 const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
