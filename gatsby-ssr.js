@@ -6,7 +6,6 @@ import {
   COLORS,
   INITIAL_COLOR_MODE_CSS_PROP,
 } from './config/theme'
-
 import App from './src/components/App'
 
 function setColorsByTheme() {
@@ -18,7 +17,7 @@ function setColorsByTheme() {
   const prefersDarkFromMQ = mql.matches
   const persistedPreference = localStorage.getItem(colorModeKey)
 
-  let colorMode = 'light'
+  let colorMode
 
   const hasUsedToggle = typeof persistedPreference === 'string'
 

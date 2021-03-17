@@ -18,6 +18,10 @@ module.exports = {
     'simple-import-sort',
   ],
   rules: {
+    'simple-import-sort/imports': 2,
+    'simple-import-sort/exports': 2,
+    'sort-imports': 0,
+    'import/order': 0,
     'prettier/prettier': 2,
     'simple-import-sort/imports': 2,
     'simple-import-sort/exports': 2,
