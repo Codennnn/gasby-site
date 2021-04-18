@@ -11,9 +11,8 @@ html {
 
 body {
   color: var(--color-text);
-  font-family: -apple-system, Rubik, '思源黑体', Segoe UI, Roboto,
-    Helvetica Neue, PingFang SC, Noto Sans, Noto Sans CJK SC, Microsoft YaHei,
-    微软雅黑, sans-serif;
+  font-family: Rubik, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Ubuntu, Helvetica, Arial, sans-serif;
   background: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
