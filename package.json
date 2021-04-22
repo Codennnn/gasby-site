@@ -15,7 +15,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "ghpages": "gh-pages -d public",
-    "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\""
+    "lint": "npm run lint:js && npm run lint:style",
+    "lint:js": "eslint \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:style": "stylelint \"./src/**/*.{css,scss}\""
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
@@ -44,9 +46,9 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^1.12.0",
     "eslint": "^7.17.0",
-    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-prettier": "^8.2.0",
     "eslint-config-react-app": "^6.0.0",
-    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-flowtype": "^5.7.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.1",
@@ -60,7 +62,7 @@
     "stylelint": "^13.8.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-standard": "^21.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.1.2"
   }

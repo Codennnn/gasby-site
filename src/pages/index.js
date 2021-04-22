@@ -115,7 +115,7 @@ export default function HomePage() {
           />
         </Avatar>
 
-        <Greeting>Hi, I'm LeoKu 😎</Greeting>
+        <Greeting>Hi, I&apos;m LeoKu 😎</Greeting>
 
         <HeroText>
           <TextLine>Good at dreaming</TextLine>
