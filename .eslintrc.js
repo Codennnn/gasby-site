@@ -18,5 +18,16 @@ module.exports = {
     'import/order': 0,
     'react-hooks/exhaustive-deps': 0,
     'react/prop-types': 0,
+    'react/jsx-sort-props': [
+      2,
+      {
+        callbacksLast: true,
+        shorthandFirst: true,
+        shorthandLast: false,
+        ignoreCase: false,
+        noSortAlphabetically: false,
+        reservedFirst: true,
+      },
+    ],
   },
 }
