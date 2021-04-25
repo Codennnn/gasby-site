@@ -73,7 +73,7 @@ export default function BlogPage({ data }) {
           })
           .map(({ node: post }) => {
             return (
-              <Article to={post.fields.slug} key={post.id}>
+              <Article key={post.id} to={post.fields.slug}>
                 <h3 className="article-title">{post.frontmatter.title}</h3>
 
                 <p className="article-excerpt">{post.excerpt}</p>

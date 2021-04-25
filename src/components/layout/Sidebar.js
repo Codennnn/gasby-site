@@ -46,13 +46,13 @@ export default function AppFooter({ visible = false }) {
     <Sidebar className={visible && 'show'}>
       <NavLinks>
         {navItems.map(({ url, name }) => (
-          <div className="nav-item" key={name}>
+          <div key={name} className="nav-item">
             {isExternal(url) ? (
-              <a href={url} target="_blank" rel="nofollow noopener noreferrer">
+              <a href={url} rel="nofollow noopener noreferrer" target="_blank">
                 {name}
               </a>
             ) : (
-              <Link to={url} partiallyActive activeClassName="active">
+              <Link partiallyActive activeClassName="active" to={url}>
                 {name}
               </Link>
             )}

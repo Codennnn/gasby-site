@@ -108,10 +108,10 @@ export default function AboutPage() {
               <li>
                 新浪微博：
                 <a
-                  style={{ color: 'inherit' }}
                   href="https://weibo.com/leoku4"
-                  target="_blank"
                   rel="noopener noreferrer nofollow"
+                  style={{ color: 'inherit' }}
+                  target="_blank"
                 >
                   令狐聪Leoku
                 </a>

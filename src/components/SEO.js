@@ -22,8 +22,8 @@ function SEO({
           <title>{seo.title}</title>
         )}
 
-        <meta name="description" content={description} />
-        <link rel="icon" href={seo.favicon} />
+        <meta content={description} name="description" />
+        <link href={seo.favicon} rel="icon" />
       </Helmet>
     </>
   )

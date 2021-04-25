@@ -17,9 +17,9 @@ export default function DarkModeToggle() {
   return (
     <label>
       <input
+        checked={colorMode === 'dark'}
         className="toggle-checkbox"
         type="checkbox"
-        checked={colorMode === 'dark'}
         onChange={ev => {
           setColorMode(ev.target.checked ? 'dark' : 'light')
         }}
