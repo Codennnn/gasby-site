@@ -1,8 +1,10 @@
+name: 同步 GitHub 仓库至 Gitee
+
 on: push
-name: Sync GitHub repository to Gitee
+
 jobs:
   run:
-    name: Run
+    name: 开始同步
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source codes
@@ -12,5 +14,5 @@ jobs:
           dst: gitee/chinesee
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
-          static_list: 'venus'
+          static_list: 'leoku.top'
           force_update: true
