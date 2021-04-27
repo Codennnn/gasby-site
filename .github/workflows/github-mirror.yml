@@ -10,7 +10,7 @@ jobs:
       - name: Checkout source codes
         uses: Yikun/hub-mirror-action@master
         with:
-          src: github/Chinesee
+          src: github/Codennnn
           dst: gitee/chinesee
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}

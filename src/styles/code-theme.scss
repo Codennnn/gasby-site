@@ -47,6 +47,12 @@ pre[class*='language-'] :not(pre) > code[class*='language-'] {
   border-radius: 0.3em;
 }
 
+/* 修改注释字体 */
+.token.comment,
+.token.block-comment {
+  font-family: Monaco, Consolas, system-ui, -apple-system, BlinkMacSystemFont;
+}
+
 .token.comment,
 .token.block-comment,
 .token.prolog,
