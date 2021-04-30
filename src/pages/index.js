@@ -111,7 +111,7 @@ export default function HomePage() {
             alt="Avatar"
             className="avatar"
             draggable="false"
-            src="https://gitee.com/chinesee/images/raw/master/img/img_043.png"
+            src="/avatar.png"
           />
         </Avatar>
 
