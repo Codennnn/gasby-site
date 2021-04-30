@@ -99,7 +99,7 @@ export default function AppHeader({ toggleAside }) {
     <Header className="header">
       <Link className="site-name" to="/">
         <img alt="Logo" className="logo" src="/logo.png" />
-        LeoKu
+        leoku.top
       </Link>
 
       <NavLinks>
