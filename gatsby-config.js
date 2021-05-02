@@ -8,17 +8,18 @@ module.exports = {
     favicon: config.siteIcon,
     language: config.lang,
     author: { name: config.author },
-    keywords: [
-      'Software Engineer',
-      'React Training',
-      'Testing JavaScript Training',
-    ],
+    keywords: ['Front-end Developer', 'Learn JavaScript', '技术博客'],
     image: config.siteLogo,
     social: {
       wechat: config.wechat,
       weibo: config.weibo,
       github: config.github,
     },
+  },
+
+  flags: {
+    DEV_SSR: true,
+    FAST_REFRESH: true,
   },
 
   plugins: [

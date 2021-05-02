@@ -1,6 +1,7 @@
+.cache
 node_modules
 public
-.cache
+static
 !.eslintrc.js
 !.prettierrc.js
 !.stylelintrc.js

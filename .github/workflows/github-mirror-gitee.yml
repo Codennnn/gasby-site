@@ -10,6 +10,7 @@ jobs:
       with:
         src: github/Codennnn
         dst: gitee/chinesee
+        # 这里的 GITEE_PRIVATE_KEY 就是 SSH 私钥 `~/.ssh/id_rsa(没有 .pub)`
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
         static_list: 'leoku.top'
