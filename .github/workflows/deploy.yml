@@ -4,6 +4,15 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '.github/workflows/github-mirror-gitee.yml'
+      - '.prettierrc.js'
+      - '.stylelintrc.js'
+      - '.eslintrc.js'
+      - '.eslintignore'
+      - '.gitignore'
+      - '**/README.md'
+      - 'yarn.lock'
 
 jobs:
   blog-cicd:
