@@ -1,57 +1,57 @@
-export const COLORS = {
+const COLORS_HSL = {
   text: {
-    light: 'hsl(218, 17%, 35%)',
-    dark: 'hsl(216, 33%, 97%)',
-  },
-  'text-hsl': {
     light: '218, 17%, 35%',
-    dark: '216, 33%, 97%',
+    dark: '211, 19%, 70%',
   },
   background: {
-    light: 'hsl(0deg, 0%, 100%)',
-    dark: 'hsl(240, 6%, 14%)',
+    light: '0deg, 0%, 100%',
+    dark: '216, 14%, 14%',
   },
   accent: {
-    light: 'hsl(36, 94%, 59%)',
-    dark: 'hsl(30, 100%, 80%)',
+    light: '36, 94%, 59%',
+    dark: '30, 100%, 80%',
   },
   primary: {
-    light: 'hsl(36, 94%, 59%)',
-    dark: 'hsl(210, 16%, 82%)',
-  },
-  'primary-hex': {
-    light: '#f9aa34',
-    dark: '#ffcc99',
-  },
-  'primary-hsl': {
     light: '36, 94%, 59%',
     dark: '210, 16%, 82%',
   },
   secondary: {
-    light: 'hsl(250deg, 100%, 50%)',
-    dark: 'hsl(190deg, 100%, 40%)',
+    light: '250, 100%, 50%',
+    dark: '190, 100%, 40%',
   },
-  text100: {
-    light: '#526060',
-    dark: '#e4e7eb',
+  'text-100': {
+    light: '180, 8%, 35%',
+    dark: '210, 11%, 47%',
   },
-  text900: {
-    light: 'hsl(0, 0%, 95%)',
-    dark: 'hsl(240, 2%, 30%)',
+  'text-900': {
+    light: '0, 0%, 95%',
+    dark: '240, 2%, 30%',
   },
-  gray300: {
-    light: '#8b97ac',
-    dark: 'hsl(0deg, 0%, 30%)',
+  'gray-300': {
+    light: '218, 17%, 61%',
+    dark: '0deg, 0%, 30%',
   },
-  gray500: {
-    light: 'hsl(0deg, 0%, 50%)',
-    dark: 'hsl(0deg, 0%, 50%)',
+  'gray-500': {
+    light: '0deg, 0%, 50%',
+    dark: '0deg, 0%, 50%',
   },
-  gray700: {
-    light: 'hsl(0deg, 0%, 30%)',
-    dark: 'hsl(0deg, 0%, 70%)',
+  'gray-700': {
+    light: '0deg, 0%, 30%',
+    dark: '0deg, 0%, 70%',
   },
 }
+
+export const COLORS = (hsl => {
+  let colors = {}
+  Reflect.ownKeys(hsl).forEach(k => {
+    colors[k] = {
+      light: `hsl(${hsl[k]['light']})`,
+      dark: `hsl(${hsl[k]['dark']})`,
+    }
+    colors[`${k}-hsl`] = hsl[k]
+  })
+  return colors
+})(COLORS_HSL)
 
 export const SCREENS = {
   sm: '480px',

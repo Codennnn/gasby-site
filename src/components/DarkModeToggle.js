@@ -15,7 +15,7 @@ export default function DarkModeToggle() {
   }
 
   return (
-    <label>
+    <label className={`toggler toggler-${colorMode}`}>
       <input
         checked={colorMode === 'dark'}
         className="toggle-checkbox"

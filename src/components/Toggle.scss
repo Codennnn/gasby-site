@@ -1,4 +1,4 @@
-label {
+.toggler {
   position: relative;
   cursor: pointer;
 }
@@ -17,10 +17,19 @@ label {
   overflow: hidden;
   font-size: 3.2px;
   background-color: white;
-  border: 0.6em solid #e4e7ec;
   border-radius: 10em;
-  // box-shadow: 0 10px 25px #e4e7ec;
   transition: background-color 0.25s;
+}
+
+.toggler-light {
+  .toggle-slot {
+    border: 0.6em solid #e4e7ec;
+  }
+}
+.toggler-dark {
+  .toggle-slot {
+    border: 0.6em solid var(--color-text);
+  }
 }
 
 .toggle-checkbox:checked ~ .toggle-slot {

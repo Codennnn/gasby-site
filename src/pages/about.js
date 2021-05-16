@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Layout from '@/components/layout'
 import SEO from '@/components/SEO'
 import { ThemeContext } from '@/components/ThemeContext'
+import { HSLToHex } from '@/utils'
 import { COLORS, SCREENS } from '~/config/theme'
 
 const About = styled.div`
@@ -46,7 +47,16 @@ function CanvasConfetti() {
 
       const deadline = performance.now() + 1 * 1000
 
-      const colors = [COLORS['primary-hex'][colorMode], '#a864fd', '#ff718d']
+      const colors = [
+        HSLToHex.apply(
+          null,
+          COLORS['primary-hsl'][colorMode]
+            .split(', ')
+            .map(v => v.replace(/\D/g, ''))
+        ),
+        '#a864fd',
+        '#ff718d',
+      ]
 
       void (function frame() {
         myConfetti({
