@@ -9,6 +9,7 @@ const Footer = styled.footer`
   align-items: center;
   justify-content: center;
   height: ${LAYOUT.footerHeight};
+  color: hsla(var(--color-text-hsl), 0.5);
 `
 
 export default function AppFooter() {

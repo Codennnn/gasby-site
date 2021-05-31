@@ -21,7 +21,7 @@ const Article = styled(Link)`
   display: block;
 
   & ~ & {
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
 
   .article-title {
@@ -32,13 +32,33 @@ const Article = styled(Link)`
 
   .article-excerpt {
     margin: 1rem 0;
-    color: var(--color-text100);
+    color: var(--color-text-100);
   }
 
   .read-more {
     color: var(--color-accent);
     font-weight: 500;
     font-size: 1.1rem;
+  }
+
+  @media (min-width: ${SCREENS.md}) {
+    .article-title {
+      max-width: 450px;
+      font-weight: bold;
+      font-size: 1.6rem;
+      background: linear-gradient(transparent, transparent),
+        linear-gradient(90deg, var(--color-text), var(--color-text));
+      background-repeat: no-repeat;
+      background-position: 100% 100%, 0 100%;
+      background-size: 0% 10px, 0 3px;
+      transition: 0.25s background-size;
+    }
+
+    &:hover {
+      .article-title {
+        background-size: 0 3px, 100% 3px;
+      }
+    }
   }
 
   @media (max-width: ${SCREENS.sm}) {
@@ -74,7 +94,9 @@ export default function BlogPage({ data }) {
           .map(({ node: post }) => {
             return (
               <Article key={post.id} to={post.fields.slug}>
-                <h3 className="article-title">{post.frontmatter.title}</h3>
+                <a className="article-title" href="void">
+                  {post.frontmatter.title}
+                </a>
 
                 <p className="article-excerpt">{post.excerpt}</p>
 
