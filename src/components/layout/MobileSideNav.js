@@ -6,7 +6,9 @@ import { isExternal } from '@/utils'
 import navItems from '~/config/nav'
 import { LAYOUT } from '~/config/theme'
 
-const Sidebar = styled.aside`
+import DarkModeToggle from '../DarkModeToggle'
+
+const SideNav = styled.aside`
   position: fixed;
   top: 0;
   left: 100vw;
@@ -41,9 +43,14 @@ const NavLinks = styled.nav`
   }
 `
 
-export default function AppFooter({ visible = false }) {
+/**
+ * 移动端侧边导航栏
+ */
+export default function MobileSideNav({ visible = false }) {
   return (
-    <Sidebar className={visible && 'show'}>
+    <SideNav className={visible && 'show'}>
+      <DarkModeToggle />
+
       <NavLinks>
         {navItems.map(({ url, name }) => (
           <div key={name} className="nav-item">
@@ -59,6 +66,6 @@ export default function AppFooter({ visible = false }) {
           </div>
         ))}
       </NavLinks>
-    </Sidebar>
+    </SideNav>
   )
 }

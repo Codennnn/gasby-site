@@ -5,7 +5,7 @@ import { LAYOUT } from '~/config/theme'
 
 import AppFooter from './AppFooter'
 import AppHeader from './AppHeader'
-import Sidebar from './Sidebar'
+import MobileSideNav from './MobileSideNav'
 
 const AppLayout = styled.div`
   position: relative;
@@ -28,23 +28,23 @@ const Main = styled.main`
 `
 
 export default function Layout({ children }) {
-  const [showAside, setShowAside] = useState(false)
+  const [showSideNav, setShowSideNav] = useState(false)
 
   return (
     <>
-      <AppLayout className={showAside && 'show-aside'}>
+      <AppLayout className={showSideNav && 'show-aside'}>
         <AppHeader
           toggleAside={() => {
-            setShowAside(!showAside)
+            setShowSideNav(!showSideNav)
           }}
         />
 
-        <Main className={showAside && 'show-aside'}>{children}</Main>
+        <Main className={showSideNav && 'show-aside'}>{children}</Main>
 
         <AppFooter />
       </AppLayout>
 
-      <Sidebar visible={showAside} />
+      <MobileSideNav visible={showSideNav} />
     </>
   )
 }

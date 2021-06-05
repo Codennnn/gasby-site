@@ -1,11 +1,11 @@
-import './Toggle.scss'
+import './DarkModeToggle.scss'
 
 import React from 'react'
 
 import MoonIcon from '@/assets/moon.svg'
 import SunIcon from '@/assets/sun.svg'
 
-import { ThemeContext } from './ThemeContext'
+import { ThemeContext } from '../ThemeContext'
 
 export default function DarkModeToggle() {
   const { colorMode, setColorMode } = React.useContext(ThemeContext)
