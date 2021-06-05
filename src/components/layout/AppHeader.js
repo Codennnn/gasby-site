@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import Menu from '@/assets/menu.svg'
@@ -95,8 +95,42 @@ const Actions = styled.div`
 `
 
 export default function AppHeader({ toggleAside }) {
+  const [isMobile, setIsMobile] = useState(true)
+
+  useEffect(() => {
+    ;(function () {
+      var throttle = function (type, name, obj) {
+        obj = obj || window
+        var running = false
+        var func = function () {
+          if (running) {
+            return
+          }
+          running = true
+          requestAnimationFrame(function () {
+            obj.dispatchEvent(new CustomEvent(name))
+            running = false
+          })
+        }
+        obj.addEventListener(type, func)
+      }
+
+      throttle('resize', 'optimizedResize')
+    })()
+
+    const event = () => {
+      setIsMobile(window.screen.width <= 480)
+    }
+
+    event()
+
+    window.addEventListener('optimizedResize', event)
+  }, [])
+
   return (
     <Header className="header">
+      {/* {isMobile && <DarkModeToggle />} */}
+
       <Link className="site-name" to="/">
         <img alt="Logo" className="logo" src="/logo.png" />
         leoku.top
@@ -119,7 +153,7 @@ export default function AppHeader({ toggleAside }) {
       </NavLinks>
 
       <Actions className="actions">
-        <DarkModeToggle />
+        {!isMobile && <DarkModeToggle />}
 
         <Menu
           className="toggle-menu"

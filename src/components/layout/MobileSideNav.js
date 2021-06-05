@@ -8,6 +8,12 @@ import { LAYOUT } from '~/config/theme'
 
 import DarkModeToggle from '../DarkModeToggle'
 
+const Toggler = styled.div`
+  position: absolute;
+  top: calc(${LAYOUT.headerHeight} + 2rem);
+  right: 3.2rem;
+`
+
 const SideNav = styled.aside`
   position: fixed;
   top: 0;
@@ -16,10 +22,12 @@ const SideNav = styled.aside`
   height: 100vh;
   padding-top: ${LAYOUT.headerHeight};
   background-color: var(--color-background);
+  visibility: hidden;
   transition: left 0.2s ease-out;
 
   &.show {
     left: calc(100vw - ${LAYOUT.sidebarWidth});
+    visibility: visible;
   }
 `
 
@@ -49,7 +57,9 @@ const NavLinks = styled.nav`
 export default function MobileSideNav({ visible = false }) {
   return (
     <SideNav className={visible && 'show'}>
-      <DarkModeToggle />
+      <Toggler>
+        <DarkModeToggle />
+      </Toggler>
 
       <NavLinks>
         {navItems.map(({ url, name }) => (
