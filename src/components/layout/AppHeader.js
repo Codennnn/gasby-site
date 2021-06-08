@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import Menu from '@/assets/menu.svg'
+import { ThemeContext } from '@/components/ThemeContext'
 import { isExternal } from '@/utils'
 import navItems from '~/config/nav'
 import { LAYOUT, SCREENS } from '~/config/theme'
@@ -54,6 +55,10 @@ const Header = styled.header`
       width: 2.5rem;
       margin-right: 1rem;
     }
+
+    @media (max-width: ${SCREENS.sm}) {
+      font-size: 1.2rem;
+    }
   }
 `
 
@@ -96,6 +101,7 @@ const Actions = styled.div`
 
 export default function AppHeader({ toggleAside }) {
   const [isMobile, setIsMobile] = useState(true)
+  const { colorMode } = React.useContext(ThemeContext)
 
   useEffect(() => {
     ;(function () {
@@ -129,10 +135,13 @@ export default function AppHeader({ toggleAside }) {
 
   return (
     <Header className="header">
-      {/* {isMobile && <DarkModeToggle />} */}
-
       <Link className="site-name" to="/">
-        <img alt="Logo" className="logo" src="/logo.png" />
+        <img
+          alt="Logo"
+          className="logo"
+          src="/logo.png"
+          style={{ opacity: colorMode === 'dark' ? 0.85 : 1 }}
+        />
         leoku.top
       </Link>
 

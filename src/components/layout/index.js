@@ -23,7 +23,8 @@ const Main = styled.main`
   transition: opacity 0.2s ease-out;
 
   &.show-aside {
-    opacity: 0.25;
+    opacity: 0.3;
+    filter: blur(1px);
   }
 `
 

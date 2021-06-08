@@ -21,6 +21,7 @@ module.exports = {
         ],
       },
     ],
+    'value-keyword-case': ['lower', { ignoreKeywords: ['colorMode'] }],
   },
   ignoreFiles: ['public'],
 }

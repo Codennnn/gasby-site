@@ -13,13 +13,6 @@ const Article = styled.article`
   margin: 0 auto;
   padding: 4rem 0;
 
-  h2 {
-    margin-top: -3.1rem;
-    padding-top: 4.6rem;
-    font-weight: bold;
-    font-size: 1.65rem;
-  }
-
   p {
     margin: 1.5rem 0;
     line-height: 1.8;
@@ -34,11 +27,7 @@ const Article = styled.article`
     box-shadow: 0 0 1.5rem hsla(var(--color-text-hsl), 0.1);
   }
 
-  @media (max-width: ${SCREENS.sm}) {
-    h2 {
-      font-size: 1.3rem;
-    }
-
+  @media (max-width: ${SCREENS.md}) {
     padding: 4rem 1.5rem;
   }
 `
@@ -49,6 +38,10 @@ const Title = styled.h1`
   font-size: 1.8rem;
   line-height: 1.5;
   word-wrap: break-word;
+
+  @media (max-width: ${SCREENS.sm}) {
+    font-size: 1.4rem;
+  }
 `
 
 const Date = styled.div`

@@ -13,7 +13,7 @@ const BlogList = styled.div`
 
   @media (max-width: ${SCREENS.sm}) {
     max-width: none;
-    padding: 1rem;
+    padding: 4rem 1.5rem;
   }
 `
 
@@ -43,6 +43,7 @@ const Article = styled(Link)`
 
   @media (min-width: ${SCREENS.md}) {
     .article-title {
+      display: inline;
       max-width: 450px;
       font-weight: bold;
       font-size: 1.6rem;
@@ -94,9 +95,9 @@ export default function BlogPage({ data }) {
           .map(({ node: post }) => {
             return (
               <Article key={post.id} to={post.fields.slug}>
-                <a className="article-title" href="void">
+                <h2 className="article-title" href="void">
                   {post.frontmatter.title}
-                </a>
+                </h2>
 
                 <p className="article-excerpt">{post.excerpt}</p>
 

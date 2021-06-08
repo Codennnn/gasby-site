@@ -21,19 +21,3 @@ body {
 ::selection {
   background: hsla(var(--color-primary-hsl), 0.15);
 }
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: hsla(var(--color-text-hsl), 0.3);
-  border: none;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-track-piece {
-  background-color: transparent;
-}
