@@ -4,7 +4,6 @@ createdAt: '2020-10-06'
 updatedAt: '2021-02-04'
 ---
 
-
 前文我们介绍了[如何将 Vue 应用部署到 GitHub Pages](/blog/deploy-vue-app-to-github-pages)，现在考虑以下场景：在你每次对代码变动时，都要手动执行 `npm run build` 操作来构建文件，然后再将构建好的文件推送到 `gh-pages` 分支来重新部署 GitHub Pages。这些操作是一成不变且耗时耗力的，那么能否让机器替代我们来执行它们，好让部署变得“水到渠成”呢？本文将介绍如何使用 [GitHub Actions](https://github.com/features/actions) 来解放我们枯燥的工作。
 
 请注意，本文不是 GitHub Actions 的教程，如果你还不熟悉什么是 GitHub Actions，不妨读一读阮一峰的 [GitHub Actions 入门教程](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)。
@@ -20,13 +19,14 @@ updatedAt: '2021-02-04'
 在项目的根目录下创建这样的目录：`.github/workflows`，然后在这个目录下面新建一个 `.yml` 文件，文件名可以任意取，比如 `deploy.yml`。
 
 文件的内容参考如下：
+
 ```yml
 # workflow 的名称。如果省略则默认为当前 workflow 的文件名
 name: Venus CI/CD
 
 on:
   push:
-    branches: 
+    branches:
       - main
 
 jobs:
@@ -35,43 +35,43 @@ jobs:
     runs-on: ubuntu-latest # 使用最新的 Ubuntu 系统作为编译部署的环境
 
     steps:
-    - name: Checkout codes
-      uses: actions/checkout@v2.3.4
+      - name: Checkout codes
+        uses: actions/checkout@v2.3.4
 
-    # 设置 node.js 运行环境
-    - name: Setup node
-      uses: actions/setup-node@v2.1.2
-      with:
-        node-version: '12.x'
+      # 设置 node.js 运行环境
+      - name: Setup node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: '12.x'
 
-    # 设置缓存依赖，加快下次安装依赖的速度
-    - name: Cache node modules
-      uses: actions/cache@v2.1.3
-      with:
-        path: '**/node_modules'
-        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+      # 设置缓存依赖，加快下次安装依赖的速度
+      - name: Cache node modules
+        uses: actions/cache@v2.1.3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
 
-    # 安装依赖
-    - name: Install dependencies
-      run: yarn install
+      # 安装依赖
+      - name: Install dependencies
+        run: yarn install
 
-    # 构建文件
-    - name: Generate files
-      run: yarn build
+      # 构建文件
+      - name: Generate files
+        run: yarn build
 
-    # 将构建后的文件推送到 gh-pages
-    - name: Push to gh-pages
-      env:
-        # 填写项目所在仓库地址
-        GITHUB_REPO: github.com/Codennnn/venus.git
-      run: |
-        cd ./dist
-        git init
-        git config --local user.name "LeoKu"
-        git config --local user.email "czc12580520@gmail.com"
-        git add .
-        git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-        git push --force --quiet "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" HEAD:gh-pages
+      # 将构建后的文件推送到 gh-pages
+      - name: Push to gh-pages
+        env:
+          # 填写项目所在仓库地址
+          GITHUB_REPO: github.com/Codennnn/venus.git
+        run: |
+          cd ./dist
+          git init
+          git config --local user.name "LeoKu"
+          git config --local user.email "czc12580520@gmail.com"
+          git add .
+          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+          git push --force --quiet "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" HEAD:gh-pages
 ```
 
 ## 自动化部署
