@@ -12,13 +12,13 @@ void (function styleTheWindowsScrollbar() {
       }
       
       ::-webkit-scrollbar-thumb {
-        background-color: rgba(116, 120, 141, 0.2) !important;
+        background-color: hsla(var(--color-text-100-hsl), 0.5) !important;
         border: none !important;
         border-radius: 4px !important;
       }
       
       ::-webkit-scrollbar-track-piece {
-        background-color: rgb(246, 248, 251) !important;
+        background-color: var(--color-background) !important;
       }
     `
     const head = document.head || document.getElementsByTagName('head')[0]
